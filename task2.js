@@ -14,11 +14,11 @@
 */
 
 // for me
-var strA =  process.argv[2];
-var strB =  process.argv[3];
+//var strA =  process.argv[2];
+//var strB =  process.argv[3];
 // for GB
-//var strA =  process.argv[1];
-//var strB =  process.argv[1];
+var strA =  process.argv[1];
+var strB =  process.argv[2];
 
 var arrA = strA.split("");
 var arrB = strB.split("");
