@@ -10,8 +10,8 @@
 > node task.rb 10 8
 > 2
 */
-var a =  process.argv[2];
-var b =  process.argv[3];
+var a =  process.argv[1];
+var b =  process.argv[2];
 var nod = Math.min(a,b);
 
 for(;nod>1;nod--)
