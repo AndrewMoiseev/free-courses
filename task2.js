@@ -12,3 +12,27 @@
 > node task.rb '1234' '2341'
 > 1
 */
+
+// for me
+var strA =  process.argv[2];
+var strB =  process.argv[3];
+// for GB
+//var strA =  process.argv[1];
+//var strB =  process.argv[1];
+
+var arrA = strA.split("");
+var arrB = strB.split("");
+var JsonB = JSON.stringify(arrB);
+var shiftA = -1;
+for(var i = 1; i <= strA.length; i++ )
+{
+	arrA = arrA.concat(arrA.shift());
+	
+	if(JSON.stringify(arrA) === JsonB) 
+	{
+		shiftA = ( i > strA.length/2 )?strA.length-i:i;
+		break;
+	}
+}
+
+process.stdout.write(shiftA.toString());
