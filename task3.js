@@ -10,15 +10,21 @@
 > node task.rb 10 8
 > 2
 */
-var a =  process.argv[1];
-var b =  process.argv[2];
-var nod = Math.min(a,b);
 
-for(;nod>1;nod--)
+function fnod(_a,_b)
 {
-	var adiv = a%nod;
-	var bdiv = b%nod;
-	if(((adiv+bdiv) == 0)) 	break;
-}
+	var nod = Math.min(_a,_b);
 
-process.stdout.write(nod.toString());
+	for(;nod>1;nod--)
+		{
+			var adiv = _a%nod;
+			var bdiv = _b%nod;
+			if(((adiv+bdiv) == 0)) 	break;
+		}
+	return nod;
+}
+//GB
+process.stdout.write(fnod(process.argv[1],process.argv[2]).toString());
+
+//me
+//process.stdout.write(fnod(process.argv[2],process.argv[3]).toString());
