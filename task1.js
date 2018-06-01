@@ -15,4 +15,4 @@ function replaceStr(str)
 	return str.replace(/[РКН]/gi,"")
 };
 
-process.stdout.write(replaceStr(process.argv[2]));
+process.stdout.write(replaceStr(process.argv[1]));
